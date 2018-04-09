@@ -5,6 +5,11 @@
 	"keywords": [
 		"liferay-theme"
 	],
+	"repository" : {
+		"type" : "git",
+		"url" : "https://github.com/marcoscv-work/mac-lateral-control-menu-themelet.git"
+	}
+
 	"liferayTheme": {
 		"screenshot": "",
 		"themelet": true,
