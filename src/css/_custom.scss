@@ -1,0 +1,66 @@
+$mac-control-menu-bg-color: #30313F !default;
+$mac-control-menu-open-icon-bg-color: $mac-control-menu-bg-color !default;
+
+$mac-control-icon-height: 44px !default;
+$mac-control-icon-text: "C" !default;
+$mac-control-icon-line-height: 40px !default;
+$mac-control-icon-position-right: -20px;
+$mac-control-icon-position-top: 40px !default;
+$mac-control-icon-width: 20px !default;
+
+.has-control-menu {
+	div#wrapper {
+		margin-top: 0;
+	}
+
+	&:not(.open) {
+		.control-menu-level-1 {
+			background-color: $mac-control-menu-bg-color;
+			transform: translateX(-100%);
+
+			&:after {
+				background-color: $mac-control-menu-bg-color;
+				border-radius: 0 10px 10px 0;
+				content: $mac-control-icon-text;
+				height: $mac-control-icon-height;
+				line-height: $mac-control-icon-line-height;
+				position: absolute;
+				right: $mac-control-icon-position-right;
+				text-align: center;
+				top: $mac-control-icon-position-top;
+				width: $mac-control-icon-width;
+			}
+		}
+	}
+
+	.control-menu-level-1 {
+		right: inherit;
+		border-radius: 0 0 10px;
+		transition: transform 0.1s ease;
+
+		&:hover {
+			transform: translateX(0);
+		}
+
+		.control-menu-nav {
+			flex-direction: column;
+		}
+
+		.control-menu-icon {
+			padding: 0;
+		}
+
+		> .container-fluid-1280 {
+			padding: 10px 0;
+		}
+
+		.tools-control-group {
+			min-width: auto;
+		}
+
+	}
+
+	&.open-admin-panel > .control-menu-level-1 {
+		padding-right: 0;
+	}
+}
